@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #e4e5e5;
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 40px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 40px;
+}
