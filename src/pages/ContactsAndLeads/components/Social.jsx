@@ -1,5 +1,5 @@
-import CalendarIcon from "../icons/CalendarIcon";
-import NotificationIcon from "../icons/NotificationIcon";
+import CalendarIcon from "../../../icons/CalendarIcon";
+import NotificationIcon from "../../../icons/NotificationIcon";
 
 export default function Social({calendars, notifications}) {
   return (

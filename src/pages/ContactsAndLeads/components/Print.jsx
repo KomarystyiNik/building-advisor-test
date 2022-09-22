@@ -1,4 +1,4 @@
-import DetailedProgressBar from "./DetailedProgressBar";
+import DetailedProgressBar from '../../../components/DetailedProgressBar'
 
 export default function Print({includedValue, additionalValue, isButton = false}) {
   return (

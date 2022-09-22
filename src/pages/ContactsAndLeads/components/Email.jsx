@@ -1,5 +1,5 @@
-import NotificationIcon from "../icons/NotificationIcon";
-import ProfileIcon from "../icons/ProfileIcon";
+import NotificationIcon from '../../../icons/NotificationIcon'
+import ProfileIcon from "../../../icons/ProfileIcon";
 
 export default function Email({ persons, notifications, estimatedDate = 'Realtime Updates' }) {
   return (

@@ -1,4 +1,4 @@
-import CalendarIcon from "../icons/CalendarIcon";
+import CalendarIcon from '../../../icons/CalendarIcon'
 
 export default function Listings({ included, additional, total }) {
   return (

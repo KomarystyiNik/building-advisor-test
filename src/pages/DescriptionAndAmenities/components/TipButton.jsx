@@ -1,5 +1,5 @@
 import { useState } from "react"
-import LighbulbIcon from "../icons/LightbulbIcon"
+import LighbulbIcon from "../../../icons/LightbulbIcon"
 
 export default function TipButton() {
   const [isOpen, setIsOpen] = useState(false)

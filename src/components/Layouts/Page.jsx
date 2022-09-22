@@ -10,11 +10,12 @@ export default function Page({children, title, description, tipText, bgColor}) {
     <div className="flex py-2 px-2">
       <div className="bg-blue-400 w-16 fixed left-0 top-0 bottom-0" />
       <div
-        className={`w-full max-w-screen ${bgColor} rounded-xl mr-4 ml-18 px-12 py-10`}
+        className={`w-full max-w-full ${bgColor} rounded-xl mr-4 ml-18 px-12 py-10`}
       >
         <div className="flex justify-between relative mb-20">
           <button className="text-xl text-grey-200 hover:text-blue-500 font-semibold relative -left-[15px] flex items-center">
-            <BackIcon styles="mr-5"/>BACK TO DASHBOARD
+            <BackIcon styles="mr-5" />
+            BACK TO DASHBOARD
           </button>
           <div className="flex space-x-5">
             <button className="text-xl text-grey-200 bg-grey-50 py-2 px-4 rounded hover:text-blue-500 font-semibold">
@@ -51,8 +52,8 @@ export default function Page({children, title, description, tipText, bgColor}) {
         </div>
         {children}
       </div>
-      <div className="space-y-4">
-        <div className="bg-white px-6 py-4 rounded-xl w-96">
+      <div className="space-y-4 w-96">
+        <div className="bg-white px-6 py-4 rounded-xl">
           <div className="flex justify-between">
             <p className="text-base text-grey-200 font-semibold">
               LISTING ACQUISITION CAMPAIGN
