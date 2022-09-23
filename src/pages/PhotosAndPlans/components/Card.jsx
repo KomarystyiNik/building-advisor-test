@@ -1,7 +1,6 @@
 import DragIcon from "../../../icons/DragIcon"
-import room from "../../../images/room.jpg"
 
-export default function Card() {
+export default function Card({image}) {
   return (
     <div className="box-content w-[150px] border border-solid border-black">
       <div className="bg-blue-100 w-[150px] flex justify-between items-center px-1">
@@ -15,7 +14,7 @@ export default function Card() {
           <DragIcon />
         </div>
       </div>
-      <img src={room} alt="room" />
+      <img src={image} alt="room" />
       <div className="py-1 px-2">
         <input
           placeholder="Caption"

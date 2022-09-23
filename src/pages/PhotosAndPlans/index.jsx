@@ -1,12 +1,21 @@
 import Page from "../../components/Layouts/Page"
 import BuildingEditForm from "../../components/Layouts/BuildingEditForm"
 import DropdownForm from "../../components/Layouts/DropdownForm"
-import Card from "./components/Card"
-import Toggle from "../../components/Toggle"
 import ImageIcon from "../../icons/ImageIcon"
+import { useState } from "react"
+import PhotosContainer from "./components/PhotosContainer"
+import room from "../../images/room.jpg"
 import CameraIcon from "../../icons/CameraIcon"
+import AddFileIcon from "../../icons/AddFileIcon"
 
 export default function PhotosAndPlans() {
+  const [isCheck, setIsCheck] = useState(false)
+  const [data] = useState(Array(11).fill(room))
+
+  const handleInputChange = () => {
+    setIsCheck(prevState => !prevState)
+  }
+
   return (
     <Page
       bgColor="bg-white"
@@ -16,7 +25,11 @@ export default function PhotosAndPlans() {
       <BuildingEditForm>
         <DropdownForm text="Images" icon={<ImageIcon />}>
           <div className="flex space-x-2 items-start">
-            <input type="checkbox" className="w-5 h-5 mt-1 cursor-pointer" />
+            <input
+              type="checkbox"
+              className="w-5 h-5 mt-1 cursor-pointer"
+              onChange={handleInputChange}
+            />
             <label className="w-fit text-md font-semibold">
               I hereby confirm that the images being uploaded by me are
               copyright-free images. In the event there is a third-party
@@ -27,37 +40,19 @@ export default function PhotosAndPlans() {
               fees in connection with defending such copyright claims.
             </label>
           </div>
-          <div className="mt-4">
-            <div className="flex justify-between mb-3">
-              <p className="text-4xl text-blue-400">Photos</p>
-              <button className="uppercase text-grey-200 hover:bg-grey-100 font-semibold bg-grey rounded-xl py-3 px-4 flex items-center">
-                <CameraIcon />
-                &nbsp;add photos
-              </button>
-            </div>
-            <div className="flex flex-nowrap space-x-2 py-1 overflow-auto max-w-[1454px]">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </div>
-          </div>
-          <div className="flex items-center justify-end space-x-2 mt-3">
-            <Toggle />
-            <p className="text-md font-semibold">Allow delete</p>
-          </div>
-          <div className="flex justify-center mt-5">
-            <button className="uppercase bg-green-200 hover:bg-green-100 px-3 py-2 rounded text-white text-md font-bold">
-              save photos
-            </button>
-          </div>
+          <PhotosContainer
+            text="Photos"
+            styles="mt-4"
+            isCheck={isCheck}
+            data={data}
+            buttonIcon={<CameraIcon />}
+          />
+          <PhotosContainer
+            text="Floor Plans"
+            styles="mt-4"
+            isCheck={isCheck}
+            buttonIcon={<AddFileIcon />}
+          />
         </DropdownForm>
       </BuildingEditForm>
     </Page>
