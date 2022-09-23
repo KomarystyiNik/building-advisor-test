@@ -17,8 +17,8 @@ export default function PhotosContainer({ styles, text, buttonIcon, isCheck, dat
         </button>
       </div>
       <div className="flex flex-nowrap space-x-2 py-1 overflow-auto max-w-[1454px] min-h-[50px] h-full">
-        {data.map((image) => (
-          <Card image={image} />
+        {data.map((image, index) => (
+          <Card image={image} key={index} />
         ))}
       </div>
       <div className="flex items-center justify-end space-x-2 mt-3">
