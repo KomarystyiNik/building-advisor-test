@@ -12,16 +12,29 @@ export default function WelcomeVideo() {
       <div className="mt-20 flex items-center">
         <div className="pr-20 w-1/2">
           <div className="flex flex-col mb-6">
-            <label className="text-lg uppercase text-grey-200 mb-3">youtube video url</label>
-            <input placeholder="E.g. https://www.youtube.com/watch?v=aBscD" className="border border-solid border-grey-100 rounded py-2 px-3 outline-blue-500 placeholder:text-xl"/>
+            <label className="text-lg uppercase text-grey-200 space-y-3 flex flex-col mb-6">
+              youtube video url
+              <input
+                placeholder="E.g. https://www.youtube.com/watch?v=aBscD"
+                className="border border-solid border-grey-100 rounded py-2 px-3 outline-blue-500 placeholder:text-xl"
+              />
+            </label>
           </div>
-          <button className="bg-green-200 hover:bg-green-100 text-white text-lg text-bold py-3 px-5 rounded uppercase">add your video</button>
+          <button className="bg-green-200 hover:bg-green-100 text-white text-lg text-bold py-3 px-5 rounded uppercase">
+            add your video
+          </button>
           <div className="flex space-x-7 mt-7 items-center">
             <YoutubeIcon />
-            <p className="flex flex-col text-grey-200">Currently only supporting Youtube hosted videos. <span>More sources launching soon.</span></p>
+            <p className="flex flex-col text-grey-200">
+              Currently only supporting Youtube hosted videos.{' '}
+              <span>More sources launching soon.</span>
+            </p>
           </div>
         </div>
-        <embed src="https://www.condo.com/" className="w-full max-w-[760px] h-[600px]"></embed>
+        <embed
+          src="https://www.condo.com/"
+          className="w-full max-w-[760px] h-[600px]"
+        ></embed>
       </div>
     </Page>
   )

@@ -5,7 +5,9 @@ export default function PhotosContainer({ styles, text, buttonIcon, isCheck, dat
   const buttonStyles = isCheck && 'hover:bg-grey-100'
 
   return (
-    <div className={`${styles} py-2 border-b border-solid border-b-grey`}>
+    <div
+      className={`${styles} py-2 border-b border-solid border-b-grey flex flex-col mt-4`}
+    >
       <div className="flex justify-between mb-3">
         <p className="text-4xl text-blue-400">{text}</p>
         <button
@@ -16,14 +18,13 @@ export default function PhotosContainer({ styles, text, buttonIcon, isCheck, dat
           &nbsp;add&nbsp;{text}
         </button>
       </div>
-      <div className="flex flex-nowrap space-x-2 py-1 overflow-auto max-w-[1454px] min-h-[50px] h-full">
+      <div className="flex space-x-2 py-1 overflow-auto 2xl:max-w-[950px] 3xl:max-w-[1150px] 4xl:max-w-[1450px] min-h-[50px] self-center">
         {data.map((image, index) => (
           <Card image={image} key={index} />
         ))}
       </div>
       <div className="flex items-center justify-end space-x-2 mt-3">
-        <Toggle />
-        <p className="text-md font-semibold">Allow delete</p>
+        <Toggle text="Allow delete" />
       </div>
       {data.length > 0 && (
         <div className="flex justify-center mt-5">

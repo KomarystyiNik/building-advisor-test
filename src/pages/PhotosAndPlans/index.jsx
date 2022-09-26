@@ -25,31 +25,32 @@ export default function PhotosAndPlans() {
       <BuildingEditForm>
         <DropdownForm text="Images" icon={<ImageIcon />}>
           <div className="flex space-x-2 items-start">
-            <input
-              type="checkbox"
-              className="w-5 h-5 mt-1 cursor-pointer"
-              onChange={handleInputChange}
-            />
-            <label className="w-fit text-md font-semibold">
-              I hereby confirm that the images being uploaded by me are
-              copyright-free images. In the event there is a third-party
-              copyright claim in connection with any or all of the images I've
-              uploaded, I hereby agree to indemnify Condo.com , its affiliates
-              or insurance company (" Condo.com ") against any and all liability
-              from such claims and further agree to pay for all Condo.com legal
-              fees in connection with defending such copyright claims.
+            <label className="text-md font-semibold flex space-x-2">
+              <input
+                type="checkbox"
+                className="w-5 h-5 mt-1 cursor-pointer"
+                onChange={handleInputChange}
+              />
+              <span className="w-[98%]">
+                I hereby confirm that the images being uploaded by me are
+                copyright-free images. In the event there is a third-party
+                copyright claim in connection with any or all of the images I've
+                uploaded, I hereby agree to indemnify Condo.com , its affiliates
+                or insurance company (" Condo.com ") against any and all
+                liability from such claims and further agree to pay for all
+                Condo.com legal fees in connection with defending such copyright
+                claims.
+              </span>
             </label>
           </div>
           <PhotosContainer
             text="Photos"
-            styles="mt-4"
             isCheck={isCheck}
             data={data}
             buttonIcon={<CameraIcon />}
           />
           <PhotosContainer
             text="Floor Plans"
-            styles="mt-4"
             isCheck={isCheck}
             buttonIcon={<AddFileIcon />}
           />

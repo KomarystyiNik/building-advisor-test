@@ -3,7 +3,7 @@ import DragIcon from "../../../icons/DragIcon"
 export default function Card({image}) {
   return (
     <div className="box-content w-[150px] border border-solid border-black">
-      <div className="bg-blue-100 w-[150px] flex justify-between items-center px-1">
+      <div className="bg-blue-100 flex justify-between items-center px-1">
         <div className="bg-black w-5 h-5 rounded-full flex justify-center items-center">
           <DragIcon />
         </div>
