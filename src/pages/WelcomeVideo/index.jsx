@@ -26,7 +26,7 @@ export default function WelcomeVideo() {
           <div className="flex space-x-7 mt-7 items-center">
             <YoutubeIcon />
             <p className="flex flex-col text-grey-200">
-              Currently only supporting Youtube hosted videos.{' '}
+              Currently only supporting Youtube hosted videos.&nbsp;
               <span>More sources launching soon.</span>
             </p>
           </div>
